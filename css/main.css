@@ -5,7 +5,7 @@ html, body {
   background-color: #AE501D; }
 
 h1 {
-  color: #FF8442;
+  color: #fff;
   margin: 1em auto;
   margin-bottom: 2em;
   text-align: center;
@@ -28,7 +28,7 @@ div.main aside {
   position: relative; }
 
 div.main aside h2 {
-  color: #FF8442;
+  color: #F8442;
   padding-left: 0.66em;
   font-family: 'Lobster', cursive; }
 
@@ -37,3 +37,9 @@ div.main aside img {
   top: 0;
   left: 60px;
   width: 100px;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  filter: invert(1); }

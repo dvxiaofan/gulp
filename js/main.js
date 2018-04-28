@@ -1,5 +1,26 @@
-(function() {
+(function () {
 
-	foo = 1;
+	var foo = 33;
+	console.log(foo);
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
