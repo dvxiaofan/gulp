@@ -7,8 +7,10 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
-const eslint = require("gulp-eslint");
+var autoprefixer = require("gulp-autoprefixer");
+var eslint = require("gulp-eslint");
+var browserSync = require("browser-sync").create();
+var concat = require("gulp-concat");
 
 gulp.task("lint", () => {
   return gulp
@@ -18,18 +20,28 @@ gulp.task("lint", () => {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task("default", ["lint"], function() {});
+gulp.task("scripts", function() {
+  gulp
+    .src("js/**/*.js")
+    .pipe(concat("all.js"))
+    .pipe(gulp.dest("dist/js"));
+});
+gulp.task("scripts-dist", function() {
+  gulp
+    .src("js/**/*.js")
+    .pipe(concat("all.js"))
+    .pipe(gulp.dest("dist/js"));
+});
 
-// gulp.task('default', defaultTask);
+gulp.task("default", defaultTask);
 
-// function defaultTask(done) {
-//   var browserSync = require("browser-sync").create();
-//   browserSync.init({
-//     server: "./"
-//   });
-//   browserSync.stream();
-//   done();
-// }
+function defaultTask(done) {
+  browserSync.init({
+    server: "./"
+  });
+  browserSync.stream();
+  done();
+}
 
 gulp.task("styles", function() {
   gulp

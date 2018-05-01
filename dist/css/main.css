@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 html,
 body {
   margin: 0;
@@ -5,26 +6,22 @@ body {
   font-family: Arial;
   background-color: #ae501d;
 }
-
 h1 {
-  color: #fff;
+  color: #ff8442;
   margin: 1em auto;
   margin-bottom: 2em;
   text-align: center;
   font-family: "Lobster", cursive;
   font-size: 5em;
 }
-
 div.main {
   max-width: 700px;
   margin: 0 auto;
 }
-
 div.main p {
   padding: 1em;
   color: #ffc2a1;
 }
-
 div.main aside {
   background: rgba(0, 0, 0, 0.2);
   float: right;
@@ -32,13 +29,11 @@ div.main aside {
   margin: 0em 1em 1em 1em;
   position: relative;
 }
-
 div.main aside h2 {
-  color: #f84422;
+  color: #ff8442;
   padding-left: 0.66em;
   font-family: "Lobster", cursive;
 }
-
 div.main aside img {
   position: absolute;
   top: 0;
@@ -46,8 +41,6 @@ div.main aside img {
   width: 100px;
   -webkit-transform: translate(0, -100%);
   transform: translate(0, -100%);
-  transform: translate(0, -100%);
   -webkit-filter: invert(1);
-  filter: invert(1);
   filter: invert(1);
 }
